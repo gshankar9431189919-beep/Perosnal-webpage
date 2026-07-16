@@ -495,28 +495,38 @@ h3 {
 
 .logo-stack {
   display: flex;
-  gap: 8px;
+  align-items: center;
+  min-height: 48px;
+  gap: 12px;
   margin-bottom: 18px;
 }
 
-.logo-stack img,
+.logo-stack img {
+  width: auto;
+  height: 48px;
+  max-width: 116px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  filter: saturate(1.12) contrast(1.04);
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.experience-card:hover .logo-stack img {
+  filter: saturate(1.22) contrast(1.1);
+  transform: scale(1.06);
+}
+
+/* Kept only as an inaccessible fallback if an institutional asset cannot load. */
 .logo-fallback {
-  display: grid;
+  display: none;
   width: 42px;
   height: 42px;
   place-items: center;
-  border: 1px solid var(--line);
   border-radius: 50%;
-  background: white;
-  object-fit: contain;
-  padding: 7px;
-}
-
-.logo-fallback {
+  background: var(--soft);
   color: var(--green-dark);
   font-size: 0.68rem;
   font-weight: 900;
-  padding: 0;
 }
 
 .experience-card time {
