@@ -578,21 +578,48 @@ h3 {
   font-weight: 900;
 }
 
-.journal-mark {
-  display: inline-flex;
-  align-items: center;
-  min-height: 25px;
-  margin: 0 0 10px;
+.publication-card:has(.journal-mark),
+.publication-card:has(.journal-logo-image) {
+  grid-template-columns: 70px minmax(0, 1fr) minmax(92px, 140px);
+}
+
+.journal-mark,
+.journal-logo-image {
+  align-self: start;
+  justify-self: end;
+  width: 100%;
+  margin: 0;
   border: 1px solid rgba(24, 118, 77, 0.18);
   border-radius: 6px;
   background: #fff;
   box-shadow: 0 3px 8px rgba(23, 33, 27, 0.06);
-  color: var(--green-dark);
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: 0.01em;
-  padding: 4px 8px;
 }
+
+.journal-mark {
+  display: grid;
+  min-height: 46px;
+  place-items: center;
+  color: var(--green-dark);
+  font-size: 0.63rem;
+  font-weight: 900;
+  line-height: 1.15;
+  padding: 6px;
+  text-align: center;
+}
+
+.journal-logo-image {
+  height: 42px;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.journal-elsevier { border-color: #e3b26b; color: #7b4b11; }
+.journal-rsc { border-color: #2b9ab2; color: #126477; }
+.journal-materials { border-color: #dd9d3a; color: #8a4e05; }
+.journal-acs { border-color: #4f7eb8; color: #1d528d; }
+.journal-springer { border-color: #4d8dc0; color: #17669d; }
+.journal-ieee { border-color: #3b70a2; color: #175382; }
+.journal-nature { border-color: #da5e82; color: #a7234f; }
 
 .conference-logo {
   display: block;
@@ -803,8 +830,16 @@ dialog::backdrop {
     flex-direction: column;
   }
 
-  .publication-card {
+  .publication-card,
+  .publication-card:has(.journal-mark),
+  .publication-card:has(.journal-logo-image) {
     grid-template-columns: 1fr;
+  }
+
+  .journal-mark,
+  .journal-logo-image {
+    justify-self: start;
+    width: min(150px, 100%);
   }
 
   .contact {
