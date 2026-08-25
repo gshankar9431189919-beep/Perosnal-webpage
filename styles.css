@@ -601,14 +601,15 @@ h3 {
 
 .publication-card:has(.journal-mark),
 .publication-card:has(.journal-logo-image) {
-  grid-template-columns: 70px minmax(0, 1fr) minmax(130px, 178px);
+  grid-template-columns: 70px minmax(0, 1fr) 76px;
 }
 
 .journal-mark,
 .journal-logo-image {
   align-self: start;
   justify-self: end;
-  width: 100%;
+  width: 72px;
+  height: 72px;
   margin: 0;
   border: 1px solid rgba(24, 118, 77, 0.18);
   border-radius: 6px;
@@ -629,8 +630,7 @@ h3 {
 }
 
 .journal-logo-image {
-  height: 54px;
-  padding: 6px;
+  padding: 5px;
   object-fit: contain;
   object-position: center;
 }
