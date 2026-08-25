@@ -629,8 +629,24 @@ h3 {
   text-align: center;
 }
 
+.publication-card > div:has(.journal-logo-image) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 72px;
+  column-gap: 18px;
+  align-items: start;
+}
+
+.publication-card > div:has(.journal-logo-image) > h3,
+.publication-card > div:has(.journal-logo-image) > p,
+.publication-card > div:has(.journal-logo-image) > a {
+  grid-column: 1;
+}
+
 .journal-logo-image {
+  grid-column: 2;
+  grid-row: 1 / span 6;
   align-self: center;
+  justify-self: end;
   padding: 5px;
   object-fit: contain;
   object-position: center;
@@ -859,10 +875,19 @@ dialog::backdrop {
     grid-template-columns: 1fr;
   }
 
+  .publication-card > div:has(.journal-logo-image) {
+    display: block;
+  }
+
   .journal-mark,
   .journal-logo-image {
     justify-self: start;
     width: min(150px, 100%);
+  }
+
+  .journal-logo-image {
+    display: block;
+    margin: 0 0 12px;
   }
 
   .contact {
