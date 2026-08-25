@@ -601,7 +601,7 @@ h3 {
 
 .publication-card:has(.journal-mark),
 .publication-card:has(.journal-logo-image) {
-  grid-template-columns: 70px minmax(0, 1fr) 76px;
+  grid-template-columns: 70px minmax(0, 1fr);
 }
 
 .journal-mark,
@@ -631,7 +631,7 @@ h3 {
 
 .publication-card > div:has(.journal-logo-image) {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 72px;
+  grid-template-columns: minmax(0, 1fr) auto;
   column-gap: 18px;
   align-items: start;
 }
@@ -645,8 +645,13 @@ h3 {
 .journal-logo-image {
   grid-column: 2;
   grid-row: 1 / span 6;
-  align-self: center;
+  align-self: stretch;
   justify-self: end;
+  width: auto;
+  height: auto;
+  min-height: 72px;
+  max-height: 156px;
+  aspect-ratio: 1;
   padding: 5px;
   object-fit: contain;
   object-position: center;
