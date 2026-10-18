@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">EES Solar</title>
+  <desc id="desc">EES Solar journal name mark</desc>
+  <defs>
+    <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd65a"/>
+      <stop offset="1" stop-color="#ef8f24"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="38" fill="#fff"/>
+  <rect x="14" y="14" width="484" height="484" rx="30" fill="none" stroke="#e8d5a4" stroke-width="10"/>
+  <circle cx="393" cy="118" r="68" fill="url(#sun)"/>
+  <g stroke="#efad32" stroke-width="12" stroke-linecap="round">
+    <path d="M393 25v-18M393 229v-18M300 118h-18M504 118h-18M327 52l-14-14M473 198l-14-14M327 184l-14 14M473 38l-14 14"/>
+  </g>
+  <text x="54" y="234" fill="#65143d" font-family="Arial, Helvetica, sans-serif" font-size="102" font-weight="800">EES</text>
+  <text x="54" y="337" fill="#e58c21" font-family="Arial, Helvetica, sans-serif" font-size="100" font-weight="700">Solar</text>
+  <path d="M55 374h402" stroke="#65143d" stroke-width="8"/>
+  <text x="56" y="417" fill="#4b4b4b" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">ROYAL SOCIETY</text>
+  <text x="56" y="449" fill="#4b4b4b" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">OF CHEMISTRY</text>
+</svg>
